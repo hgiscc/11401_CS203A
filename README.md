@@ -1,6 +1,20 @@
-# 11401_CS203A
-### this repository is for data structure course
-### To store hw or other thing , I guess.
+# 11401_CS203A 
+- Course Title: Data Structures
+- Course Code: CS203A
+- Target Audience: Undergraduate Students
+- Duration: 18 Weeks (including Midterm and Final exams)
+- Semester: 11401
+- Credits: 3
+- Instructor: Yu-Feng Huang
+- Course Time(Classroom):
+  - Monday 09:10–10:00 (R60104)
+  - Tuesday 15:10–17:00 (R1102)
+- Contact: Yu-Feng Huang
+- Teaching Assistant: To be announced
+- Office Hours:
+  - Monday 14:00-16:00 (R1310)
+  - Wednesday 14:00–16:00 (R1310)
+
 - ##### I'm Hsu Yi-Chen\/ 1131428_徐翊甄/
 - ##### This **data structure** course is for the second grade in Yuan Ze University/
   - Learning how to store Data ans some algorithm
