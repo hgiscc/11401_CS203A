@@ -38,9 +38,7 @@ Array in C
   char string array[5];
   array[5] = {"aaa","bbb"}
   ```
-+ Initialization
-+ Access
-+ Resize
+> because fixed array is almost same with dynamic one. I thinl Declaration is totally enough. All we need to know is this one can not resize.
 #### Dynamic Array
 > length can be chang by using remalloc / need malloc at the first time
 + Declaration
