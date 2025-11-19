@@ -1,3 +1,34 @@
+# Assignment IV: Hash Function Design & Observation
+
+## Important Dates
+- **Due Date**: 2025.11.23 23:59:59  
+- **Submission**: Submit your code in C and C++ along with `README.md` in your course repository (`11401_CS203A/Assignment/AssignmentIV/`).
+
+## Learning Objectives
+- Understand how the **choice of hash function** and **table size** (m) affects index distribution.
+- Design and implement hash functions for both **integer keys** and **string keys**.
+- Gain practical experience in creating and testing **hash functions** in C and C++.
+- Analyze **index patterns**, **collision rates**, and **distribution uniformity** for various table sizes (m).
+- Learn how to use [Visual Studio Code to connect to your GitHub repository](./VSCode.md) for seamless version control and collaboration.
+
+## Repository Structure
+```
+```
+AssignmentIV
+├── C                       # C implementation directory
+│   ├── hash_fn.c           # Hash function implementation in C
+│   ├── hash_fn.h           # Header file for C hash functions
+│   └── main.c              # Main program calling hash functions
+├── CXX                     # C++ implementation directory
+│   ├── hash_fn.cpp         # Hash function implementation in C++
+│   ├── hash_fn.hpp         # Header file for C++ hash functions
+│   └── main.cpp            # Main program calling hash functions
+├── Makefile                # Build configuration file
+├── README.md               # Assignment documentation
+├── README_template.md      # Template for README documentation
+└── VSCode.md               # VS Code setup instructions
+```
+
 ## Getting Started
 
 1. **Clone the Repository**  
@@ -33,13 +64,13 @@
     ```
     AssignmentIV
     ├── C
-    │   ├── hash_fn.c
+    │   ├── hash_fn.c
     │   ├── hash_fn.h
-    │   └── main.c
+    │   └── main.c
     ├── CXX
-    │   ├── hash_fn.cpp
+    │   ├── hash_fn.cpp
     │   ├── hash_fn.hpp
-    │   └── main.cpp
+    │   └── main.cpp
     └── README.md
 
     3 directories, 5 files
@@ -58,8 +89,20 @@
     - Document your development process and observations in `README.md`.
 
 ## Folder Structure in Your Course Repository
-AssignmentIV/ ├── C/ # C 實作目錄 │ ├── hash_fn.c # C 語言雜湊函數實作 │ ├── hash_fn.h # C 語言雜湊函數頭檔 │ └──XX main.c # 調用雜湊函數的主程式 ├ - C/fn雜湊函數實作 │ ├── hash_fn.hpp # C++ 雜湊函數頭檔 │ └── main.cpp # 呼叫雜湊函數的主程式 ├── Makefile # 建置設定檔 ├── README.md # 作業文檔 └ 標定。
-
+```
+AssignmentIV/
+├── C/                      # C implementation directory
+│   ├── hash_fn.c           # Hash function implementation in C
+│   ├── hash_fn.h           # Header file for C hash functions
+│   └── main.c              # Main program calling hash functions
+├── CXX/                    # C++ implementation directory
+│   ├── hash_fn.cpp         # Hash function implementation in C++
+│   ├── hash_fn.hpp         # Header file for C++ hash functions
+│   └── main.cpp            # Main program calling hash functions
+├── Makefile                # Build configuration file
+├── README.md               # Assignment documentation
+└── VSCode.md               # VS Code setup instructions
+```
 
 ## Assignment Instructions
 - **Objective**: Design and implement a hash function in C/C++ and analyze its index distribution.

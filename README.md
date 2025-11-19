@@ -22,3 +22,11 @@
   - Learning how to store Data ans some algorithm
   - This semester, I'll be recording all my code here.
   - still thinking...  
+# pronblem
+- 教程只出現macOS的cmd指令  windows使用者直接開不出來
+```
+example:
+
+tree /F  ---windows
+tree -L 2 AssignmentIV ---macOS
+```
