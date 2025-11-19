@@ -57,7 +57,9 @@ AssignmentIV
     Ensure the folder structure is correct:
     ```bash
     cd Assignment
-    tree -L 2 AssignmentIV
+    tree -L 2 AssignmentIV  //this only \for macOS & \Linux
+    tree /F /A  //\for windows
+
     ```
     Expected output:
     ```
