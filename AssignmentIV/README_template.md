@@ -84,10 +84,12 @@ m: the size of array.
   ```
 
 ### Result Snapshot
-- Example output for integers:
+- Example output :
+- C
+  ![hash_c]( "output_c.png" )
   ```
   === Hash Function Observation (C Version) ===
-
+  
   === Table Size m = 10 ===
   Key     Index
   -----------------
@@ -202,6 +204,12 @@ m: the size of array.
   pig     15
   fox     5
 
+  ```
+
+- CXX
+ ![hash_cxx]("output_cxx.png")
+
+  ```
   === Hash Function Observation (C++ Version) ===
 
   === Table Size m = 10 ===
