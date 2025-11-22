@@ -86,7 +86,8 @@ m: the size of array.
 ### Result Snapshot
 - Example output :
 - C
-  ![hash_c]( "output_c.png" )
+
+  ![hash_c]( output_c.png )
   ```
   === Hash Function Observation (C Version) ===
   
@@ -207,7 +208,7 @@ m: the size of array.
   ```
 
 - CXX
- ![hash_cxx]("output_cxx.png")
+ ![hash_cxx](output_cxx.png)
 
   ```
   === Hash Function Observation (C++ Version) ===
