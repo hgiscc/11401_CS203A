@@ -4,9 +4,9 @@ This assignment focuses on the design and observation of hash functions using C/
 Students are expected to implement and analyze the behavior of hash functions, 
 evaluate their efficiency, and understand their applications in computer science.
 
-Developer: 徐翊甄 
-Email: <jennyhsu0301@gmail.com>
-OS: windows  
+- Developer: 徐翊甄 
+- Email: <jennyhsu0301@gmail.com>
+- OS: windows  
 
 ## My Hash Function
 ### Integer Keys 
@@ -351,3 +351,4 @@ m: the size of array.
 1. Because my first Int function is key = key % 10 , all size in m was too collosion. I just delete this to let m = 11 & 37 has les collision
 2. I think it hard to come up with a function for all size, just let all keys %m may be the best choise.
 3. I'm not sure if I can change the input of each function. If ture, I should do something like ppt, add a variable to record those key has collision, and all +1. 
+4. actuaily, I can't use Makefile to compilte .c and .cpp. so I use manual compiltion.

@@ -12,7 +12,8 @@
 
    Developer: Yu-Feng Huang <yfhuang@saturn.yzu.edu.tw>
    
-   - 2025/11/23: add hash function in my HashInt & myHashString
+   - 2025/11/23: add hash function in myHashInt & myHashString
+   - 2025/11/23: change hash function in myHashInt to avoid collision
 
    Developer: 徐翊甄 <jennyhsu0301@gmail.com>
  */
