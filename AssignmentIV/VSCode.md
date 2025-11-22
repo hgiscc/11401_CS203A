@@ -1,5 +1,5 @@
 # Connect to GitHub with VSCode
-
+use windows
 ## Prerequisites
 Before you begin, ensure you have the following:
 - Visual Studio Code installed on your computer. [Download VS Code here](https://code.visualstudio.com/)
@@ -11,10 +11,10 @@ Before you begin, ensure you have the following:
 1. **Install the GitHub Extension for VSCode**
     - Open VSCode.
     - Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window.
-    - Search for "GitHub Pull Requests and Issues" and install the extension.
+    - Search for "GitHub Pull Requests " and install the extension.
 
 2. **Sign in to GitHub**
-    - Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS).
+    - Open the Command Palette (`Ctrl+Shift+P`).
     - Type `GitHub: Sign in` and select the option.
     - Follow the prompts to authenticate with your GitHub account.
 
@@ -34,8 +34,8 @@ Before you begin, ensure you have the following:
     - Stage your changes, write a commit message, and commit the changes.
 
 6. **Push Changes to GitHub**
-    - After committing, click the `Sync Changes` button in the Source Control view.
-    - This will push your changes to the GitHub repository.
+    - After committing, click the `commit` button in the Source Control view. 
+    - Then click `Sync Changes` This will push your changes to the GitHub repository.
 
 ## Additional Tips
 - Use the built-in terminal in VSCode for advanced Git commands.
