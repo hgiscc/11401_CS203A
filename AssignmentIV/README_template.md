@@ -14,10 +14,9 @@ key : what need to be input.
 m: the size of array.
 - Formula / pseudocode:
   ```text
-  key = key % 10;
   return key % m;
   ```
-- Rationale: just use it units digit decide index, than put it in hash by %m,that means every keys must in this structer.
+- Rationale: %m to let all keys can distribute on structer
 
 ### Non-integer Keys
 - Formula / pseudocode:
