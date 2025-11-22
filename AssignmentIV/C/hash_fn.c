@@ -11,17 +11,21 @@
     - 2025/11/17: Refactored to use hash_fn.h
 
    Developer: Yu-Feng Huang <yfhuang@saturn.yzu.edu.tw>
+   
+   - 2025/11/23: add hash function in my HashInt & myHashString
+
+   Developer: 徐翊甄 <jennyhsu0301@gmail.com>
  */
 
 #include "hash_fn.h"
 
 int myHashInt(int key, int m) {
-    // TODO: replace with your own design
+    // key = key % 10; ----will collision ,bad 
     return key % m;  // division method example
 }
 
 int myHashString(const char* str, int m) {
     unsigned long hash = 0;
-    // TODO: replace with your own design
+    hash = str[0] - 'a';
     return (int)(hash % m); // basic division method
 }

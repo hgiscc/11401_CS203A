@@ -11,16 +11,19 @@
     - 2025/11/17: Refactored to use hash_fn.hpp
 
    Developer: Yu-Feng Huang <yfhuang@saturn.yzu.edu.tw>
+
+   - 2025/11/23: add hash function in my HashInt & myHashString
+
+   Developer: 徐翊甄 <jennyhsu0301@gmail.com>
  */
 #include "hash_fn.hpp"
-
 int myHashInt(int key, int m) {
-    // TODO: replace with your own design
-    return key % m;  // basic division method
+   // key = key % 10; ----will collision ,bad 
+    return key % m ;  // basic division method
 }
 
 int myHashString(const std::string& str, int m) {
     unsigned long hash = 0;
-    // TODO: replace with your own design
+    hash = str[0] - 'a';
     return static_cast<int>(hash % m);  // basic division method
 }

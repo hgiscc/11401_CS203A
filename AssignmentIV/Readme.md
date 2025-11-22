@@ -3,6 +3,7 @@
 ## Important Dates
 - **Due Date**: 2025.11.23 23:59:59  
 - **Submission**: Submit your code in C and C++ along with `README.md` in your course repository (`11401_CS203A/Assignment/AssignmentIV/`).
+-**OS**: windows 
 
 ## Learning Objectives
 - Understand how the **choice of hash function** and **table size** (m) affects index distribution.
@@ -57,8 +58,8 @@ AssignmentIV
     Ensure the folder structure is correct:
     ```bash
     cd Assignment
-    tree -L 2 AssignmentIV  //this only \for macOS & \Linux
-    tree /F /A  //\for windows
+    tree -L 2 AssignmentIV  //this only for macOS & Linux
+    tree /F /A  //for windows
 
     ```
     Expected output:

@@ -4,23 +4,29 @@ This assignment focuses on the design and observation of hash functions using C/
 Students are expected to implement and analyze the behavior of hash functions, 
 evaluate their efficiency, and understand their applications in computer science.
 
-Developer: [Your Name]  
-Email: [Your email]  
+Developer: 徐翊甄 
+Email: <jennyhsu0301@gmail.com>
+OS: windows  
 
 ## My Hash Function
 ### Integer Keys 
+key : what need to be input.
+m: the size of array.
 - Formula / pseudocode:
   ```text
-  [Your implementation here]
+  key = key % 10;
+  return key % m;
   ```
-- Rationale: [Explain your design choices and how they minimize collisions.]
+- Rationale: just use it units digit decide index, than put it in hash by %m,that means every keys must in this structer.
 
 ### Non-integer Keys
 - Formula / pseudocode:
   ```text
-  [Your implementation here]
+    unsigned long hash = 0;
+    hash = str[0] - 'a';
+    return (int)(hash % m); // basic division method
   ```
-- Rationale: [Explain your approach and its effectiveness for non-integer keys.]
+- Rationale: decide the Index by the first char. In this function, whose first letter is 'a' will become '0'....until 'z' will become '25'. After that, use %m to make sure all key will store in structer.
 
 ## Experimental Setup
 - Table sizes tested (m): 10, 11, 37
@@ -88,21 +94,114 @@ Email: [Your email]
   -----------------
   21      1
   22      2
-  ...
+  23      3
+  24      4
+  25      5
+  26      6
+  27      7
+  28      8
+  29      9
+  30      0
+  51      1
+  52      2
+  53      3
+  54      4
+  55      5
+  56      6
+  57      7
+  58      8
+  59      9
+  60      0
 
   === Table Size m = 11 ===
   Key     Index
   -----------------
-  21      10
-  22      0
-  ...
+  21      1
+  22      2
+  23      3
+  24      4
+  25      5
+  26      6
+  27      7
+  28      8
+  29      9
+  30      0
+  51      1
+  52      2
+  53      3
+  54      4
+  55      5
+  56      6
+  57      7
+  58      8
+  59      9
+  60      0
 
   === Table Size m = 37 ===
   Key     Index
   -----------------
-  21      21
-  22      22
-  ...
+  21      1
+  22      2
+  23      3
+  24      4
+  25      5
+  26      6
+  27      7
+  28      8
+  29      9
+  30      0
+  51      1
+  52      2
+  53      3
+  54      4
+  55      5
+  56      6
+  57      7
+  58      8
+  59      9
+  60      0
+
+  === String Hash (m = 10) ===
+  Key     Index
+  -----------------
+  cat     2
+  dog     3
+  bat     1
+  cow     2
+  ant     0
+  owl     4
+  bee     1
+  hen     7
+  pig     5
+  fox     5
+
+  === String Hash (m = 11) ===
+  Key     Index
+  -----------------
+  cat     2
+  dog     3
+  bat     1
+  cow     2
+  ant     0
+  owl     3
+  bee     1
+  hen     7
+  pig     4
+  fox     5
+
+  === String Hash (m = 37) ===
+  Key     Index
+  -----------------
+  cat     2
+  dog     3
+  bat     1
+  cow     2
+  ant     0
+  owl     14
+  bee     1
+  hen     7
+  pig     15
+  fox     5
 
   === Hash Function Observation (C++ Version) ===
 
@@ -111,45 +210,111 @@ Email: [Your email]
   -----------------
   21      1
   22      2
-  ...
+  23      3
+  24      4
+  25      5
+  26      6
+  27      7
+  28      8
+  29      9
+  30      0
+  51      1
+  52      2
+  53      3
+  54      4
+  55      5
+  56      6
+  57      7
+  58      8
+  59      9
+  60      0
 
   === Table Size m = 11 ===
   Key     Index
   -----------------
-  21      10
-  22      0
-  ...
+  21      1
+  22      2
+  23      3
+  24      4
+  25      5
+  26      6
+  27      7
+  28      8
+  29      9
+  30      0
+  51      1
+  52      2
+  53      3
+  54      4
+  55      5
+  56      6
+  57      7
+  58      8
+  59      9
+  60      0
 
   === Table Size m = 37 ===
   Key     Index
   -----------------
-  21      21
-  22      22
-  ...
-  ```
+  21      1
+  22      2
+  23      3
+  24      4
+  25      5
+  26      6
+  27      7
+  28      8
+  29      9
+  30      0
+  51      1
+  52      2
+  53      3
+  54      4
+  55      5
+  56      6
+  57      7
+  58      8
+  59      9
+  60      0
 
-- Example output for strings:
-  ```
   === String Hash (m = 10) ===
   Key     Index
   -----------------
-  cat     0
-  dog     0
-  ...
+  cat     2
+  dog     3
+  bat     1
+  cow     2
+  ant     0
+  owl     4
+  bee     1
+  hen     7
+  pig     5
+  fox     5
 
   === String Hash (m = 11) ===
   Key     Index
   -----------------
-  cat     0
-  dog     0
-  ...
+  cat     2
+  dog     3
+  bat     1
+  cow     2
+  ant     0
+  owl     3
+  bee     1
+  pig     4
+  fox     5
 
   === String Hash (m = 37) ===
   Key     Index
   -----------------
-  cat     0
-  dog     0
-  ...
+  cat     2
+  bat     1
+  cow     2
+  ant     0
+  owl     14
+  bee     1
+  hen     7
+  pig     15
   ```
 
 - Observations: Outputs align with the analysis, showing better distribution with prime table sizes.
@@ -168,11 +333,10 @@ Email: [Your email]
 - Observations: Outputs align with the analysis, showing better distribution with prime table sizes.
 
 ## Analysis
-- Prime vs non-prime `m`: Prime table sizes generally result in better distribution and fewer collisions.
-- Patterns or collisions: Non-prime table sizes tend to produce repetitive patterns, leading to more collisions.
-- Improvements: Use a prime table size and a well-designed hash function to enhance distribution.
-
+- prime like m = 11 or 37 it will not lead to collision.
+- non-prmie like m = 10, will be more collision. 
+- for structer to store letters, we need change letters into number. 
 ## Reflection
-1. Designing hash functions requires balancing simplicity and effectiveness to minimize collisions.
-2. Table size significantly impacts the uniformity of the hash distribution, with prime sizes performing better.
-3. The design using a prime table size and a linear transformation formula produced the most uniform index sequence.
+1. Because my first Int function is key = key % 10 , all size in m was too collosion. I just delete this to let m = 11 & 37 has les collision
+2. I think it hard to come up with a function for all size, just let all keys %m may be the best choise.
+3. I'm not sure if I can change the input of each function. If ture, I should do something like ppt, add a variable to record those key has collision, and all +1. 
