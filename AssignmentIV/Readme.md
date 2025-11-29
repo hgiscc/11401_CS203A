@@ -12,11 +12,14 @@ evaluate their efficiency, and understand their applications in computer science
 ### Integer Keys 
 key : what need to be input.
 m: the size of array.
+i: the counter for hash_fn,first is 0 outside the function.
 - Formula / pseudocode:
   ```text
+  key = key + i;
+  i++;
   return key % m;
   ```
-- Rationale: %m to let all keys can distribute on structer
+- Rationale: add i when compute each key,then %m to let all keys can distribute in structer. this i can make result looks more distribute.
 
 ### Non-integer Keys
 - Formula / pseudocode:
@@ -353,11 +356,13 @@ m: the size of array.
 - Observations: Outputs align with the analysis, showing better distribution with prime table sizes.
 
 ## Analysis
-- prime like m = 11 or 37 it will not lead to collision.
-- non-prmie like m = 10, will be more collision. 
+- prime like m = 11 or 37 it will not lead to so much collision.
+- non-prmie like m = 10, will be more collision even I change keys by add an i. 
 - for structer to store letters, we need change letters into number. 
 ## Reflection
 1. Because my first Int function is key = key % 10 , all size in m was too collosion. I just delete this to let m = 11 & 37 has les collision
 2. I think it hard to come up with a function for all size, just let all keys %m may be the best choise.
 3. I'm not sure if I can change the input of each function. If ture, I should do something like ppt, add a variable to record those key has collision, and all +1. 
 4. actuaily, I can't use Makefile to compilte .c and .cpp. so I use manual compiltion.
+5. after the test in 11/25, I find this hash function must be more complex , so I change myhashInt() by how the line probing work.
+6. it looks like more complex can lead to less collision, but for those size are too small or toocommon like 10,has lot of factors, it looks still the same. Now I know why it recommainded for us to use prime number for table size. 
