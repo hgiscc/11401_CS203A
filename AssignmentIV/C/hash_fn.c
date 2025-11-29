@@ -14,14 +14,16 @@
    
    - 2025/11/23: add hash function in myHashInt & myHashString
    - 2025/11/23: change hash function in myHashInt to avoid collision
-
+   - 2025/11/30: test another hash function in myHashString
    Developer: 徐翊甄 <jennyhsu0301@gmail.com>
  */
 
 #include "hash_fn.h"
-
+int i = 0;
 int myHashInt(int key, int m) {
     // key = key % 10; ----will collision ,bad 
+    key = key+i;
+    i++;
     return key % m;  // division method example
 }
 

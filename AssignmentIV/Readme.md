@@ -59,12 +59,20 @@ m: the size of array.
 
 ### Manual Compilation (if needed)
 - Command for C:
+- first go to the file in AssignmentIV\C or AssignmentIV\CXX
   ```bash
-  gcc -std=c23 -Wall -Wextra -Wpedantic -g -o C/hash_function C/main.c C/hash_fn.c
+  g++ main.c hash_fn.c -o hash_c.exe
+
+  //gcc -std=c23 -Wall -Wextra -Wpedantic -g -o C/hash_function C/main.c C/hash_fn.c
+  --this one is how teacher wirite but i didn\'t test it.
+  --just put here \for reference 
   ```
 - Command for C++:
   ```bash
+  g++ main.cpp hash_fn.cpp -o hash_cpp.exe
+
   g++ -std=c++23 -Wall -Wextra -Wpedantic -g -o CXX/hash_function_cpp CXX/main.cpp CXX/hash_fn.cpp
+  - same to above
   ```
 
 ### Clean Build Files
@@ -76,92 +84,92 @@ m: the size of array.
 ### Execution
 - Run the compiled binary:
   ```bash
-  ./hash_function
+  ./hash_c.exe
   ```
   or
   ```bash
-  ./hash_function_cpp
+  ./hash_cpp.exe
   ```
 
 ### Result Snapshot
 - Example output :
 - C
 
-  ![hash_c]( output_c.png )
+  ![hash_c]( output_c2.png )
   ```
   === Hash Function Observation (C Version) ===
-  
+
   === Table Size m = 10 ===
   Key     Index
-  -----------------
+  -----------------        
   21      1
-  22      2
-  23      3
-  24      4
-  25      5
-  26      6
-  27      7
-  28      8
-  29      9
-  30      0
+  22      3
+  23      5
+  24      7
+  25      9
+  26      1
+  27      3
+  28      5
+  29      7
+  30      9
   51      1
-  52      2
-  53      3
-  54      4
-  55      5
-  56      6
-  57      7
-  58      8
-  59      9
-  60      0
+  52      3
+  53      5
+  54      7
+  55      9
+  56      1
+  57      3
+  58      5
+  59      7
+  60      9
 
   === Table Size m = 11 ===
   Key     Index
   -----------------
-  21      10
-  22      0
+  21      8
+  22      10
   23      1
-  24      2
-  25      3
-  26      4
-  27      5
-  28      6
-  29      7
-  30      8
-  51      7
-  52      8
-  53      9
+  24      3
+  25      5
+  26      7
+  27      9
+  28      0
+  29      2
+  30      4
+  51      4
+  52      6
+  53      8
   54      10
-  55      0
-  56      1
-  57      2
-  58      3
-  59      4
-  60      5
+  55      1
+  56      3
+  57      5
+  58      7
+  59      9
+  60      0
 
   === Table Size m = 37 ===
   Key     Index
   -----------------
-  21      21
-  22      22
-  23      23
-  24      24
-  25      25
-  26      26
-  27      27
-  28      28
-  29      29
-  30      30
-  51      14
-  52      15
-  53      16
-  54      17
-  55      18
-  56      19
-  57      20
-  58      21
-  59      22
-  60      23
+  21      24
+  22      26
+  23      28
+  24      30
+  25      32
+  26      34
+  27      36
+  28      1
+  29      3
+  30      5
+  51      27
+  52      29
+  53      31
+  54      33
+  55      35
+  56      0
+  57      2
+  58      4
+  59      6
+  60      8
 
   === String Hash (m = 10) ===
   Key     Index
@@ -208,7 +216,7 @@ m: the size of array.
   ```
 
 - CXX
- ![hash_cxx](output_cxx.png)
+ ![hash_cxx](output_cxx2.png)
 
   ```
   === Hash Function Observation (C++ Version) ===
@@ -217,73 +225,73 @@ m: the size of array.
   Key     Index
   -----------------
   21      1
-  22      2
-  23      3
-  24      4
-  25      5
-  26      6
-  27      7
-  28      8
-  29      9
-  30      0
+  22      3
+  23      5
+  24      7
+  25      9
+  26      1
+  27      3
+  28      5
+  29      7
+  30      9
   51      1
-  52      2
-  53      3
-  54      4
-  55      5
-  56      6
-  57      7
-  58      8
-  59      9
-  60      0
+  52      3
+  53      5
+  54      7
+  55      9
+  56      1
+  57      3
+  58      5
+  59      7
+  60      9
 
   === Table Size m = 11 ===
   Key     Index
   -----------------
-  21      10
-  22      0
+  21      8
+  22      10
   23      1
-  24      2
-  25      3
-  26      4
-  27      5
-  28      6
-  29      7
-  30      8
-  51      7
-  52      8
-  53      9
+  24      3
+  25      5
+  26      7
+  27      9
+  28      0
+  29      2
+  30      4
+  51      4
+  52      6
+  53      8
   54      10
-  55      0
-  56      1
-  57      2
-  58      3
-  59      4
-  60      5
+  55      1
+  56      3
+  57      5
+  58      7
+  59      9
+  60      0
 
   === Table Size m = 37 ===
   Key     Index
   -----------------
-  21      21
-  22      22
-  23      23
-  24      24
-  25      25
-  26      26
-  27      27
-  28      28
-  29      29
-  30      30
-  51      14
-  52      15
-  53      16
-  54      17
-  55      18
-  56      19
-  57      20
-  58      21
-  59      22
-  60      23
+  21      24
+  22      26
+  23      28
+  24      30
+  25      32
+  26      34
+  27      36
+  28      1
+  29      3
+  30      5
+  51      27
+  52      29
+  53      31
+  54      33
+  55      35
+  56      0
+  57      2
+  58      4
+  59      6
+  60      8
 
   === String Hash (m = 10) ===
   Key     Index
@@ -326,6 +334,7 @@ m: the size of array.
   hen     7
   pig     15
   fox     5
+
   ```
 
 - Observations: Outputs align with the analysis, showing better distribution with prime table sizes.
